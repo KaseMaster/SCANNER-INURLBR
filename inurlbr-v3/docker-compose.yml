@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  inurlbr:
+    build: .
+    container_name: inurlbr-scanner
+    volumes:
+      - ./output:/app/output
+      - ./config:/app/config
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+      - TOR_ENABLED=false
+    networks:
+      - scanner_net
+    depends_on:
+      - tor
+      
+  tor:
+    image: dperson/torproxy:latest
+    container_name: inurlbr-tor
+    restart: unless-stopped
+    networks:
+      - scanner_net
+    ports:
+      - "9050:9050"
+    environment:
+      - TZ=UTC
+
+networks:
+  scanner_net:
+    driver: bridge

@@ -1,0 +1,13 @@
+vendor/
+output/*
+!output/.gitkeep
+config/*.yaml
+!config/.gitkeep
+.phpunit.cache/
+.phpstan.resultCache
+composer.lock
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+tests/tmp/

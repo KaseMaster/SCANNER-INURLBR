@@ -1,0 +1,33 @@
+```
+# Dependencies
+vendor/
+composer.lock
+
+# Build artifacts
+bin/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+.phpunit.result.cache
+
+# Coverage
+coverage/
+htmlcov/
+*.gcov
+*.lcov
+```

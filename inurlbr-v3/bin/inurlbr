@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Inurlbr\Core\Scanner;
+use Symfony\Component\Console\Application;
+use Inurlbr\Command\ScanCommand;
+
+$application = new Application('INURLBR', '3.0.0');
+$application->add(new ScanCommand());
+$application->setDefaultCommand('scan', true);
+$application->run();
