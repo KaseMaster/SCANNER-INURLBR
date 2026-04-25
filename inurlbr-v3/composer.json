@@ -1,0 +1,55 @@
+{
+    "name": "inurlbr/inurlbr",
+    "description": "Advanced Google Hacking & Vulnerability Scanner - Modernized v3.0",
+    "type": "project",
+    "license": "GPL-3.0",
+    "require": {
+        "php": "^8.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-pcntl": "*",
+        "symfony/console": "^7.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "monolog/monolog": "^3.5",
+        "react/http": "^1.9",
+        "react/socket": "^1.14"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.10",
+        "rector/rector": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.49"
+    },
+    "autoload": {
+        "psr-4": {
+            "Inurlbr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Inurlbr\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/inurlbr"
+    ],
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-html coverage",
+        "analyze": "phpstan analyze src",
+        "lint": "find src -name '*.php' -exec php -l {} \\;",
+        "fix": "php-cs-fixer fix",
+        "refactor": "rector process src",
+        "start": "php bin/inurlbr"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
