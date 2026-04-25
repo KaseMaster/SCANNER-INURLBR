@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Inurlbr\Validators;
 
 use Inurlbr\Contracts\ValidatorInterface;
-use InurlBr\Models\Vulnerability;
+use Inurlbr\Models\Vulnerability;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Psr\Log\LoggerInterface;

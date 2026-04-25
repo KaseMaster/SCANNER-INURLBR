@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Inurlbr\Report;
 
 use Inurlbr\Contracts\ReportGeneratorInterface;
-use InurlBr\Models\Vulnerability;
+use Inurlbr\Models\Vulnerability;
 
 /**
  * Generador de reportes en formato Markdown.
