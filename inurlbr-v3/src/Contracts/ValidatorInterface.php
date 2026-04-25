@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Inurlbr\Contracts;
 
-use InurlBr\Models\Vulnerability;
+use Inurlbr\Models\Vulnerability;
 
 /**
  * Interface para validadores de vulnerabilidades.

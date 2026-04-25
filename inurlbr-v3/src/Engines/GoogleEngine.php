@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Inurlbr\Engines;
 
 use Inurlbr\Core\AbstractEngine;
-use Inurlbr\Core\Vulnerability;
+use Inurlbr\Models\Vulnerability;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
